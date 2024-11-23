@@ -43,10 +43,10 @@ void	sort_tab(t_stack *stack_a, t_stack *stack_b)
 	size_t	min_index;
 
 	i = 0;
-	if (is_sorted(stack_a))
-		return ;
 	if (stack_a->size <= 5)
 		manual_sort(stack_a, stack_b);
+	if (is_sorted(stack_a))
+		return ;
 	while (i++ < 2 && stack_a->size > 3)
 		push_b(stack_a, stack_b);
 	while (stack_a->size > 3)
